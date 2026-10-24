@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nebrass Car — Location de voitures à Casablanca</title>
+<meta name="description" content="Nebrass Car : location de voitures à Casablanca, Bd Mohamed Al Bakkali. Bonnes voitures, excellent service, ouvert 24h/24 et 7j/7. Réservation sur WhatsApp.">
+<meta name="theme-color" content="#24112f">
+<meta property="og:title" content="Nebrass Car — Location de voitures à Casablanca">
+<meta property="og:description" content="Nebrass Car : location de voitures à Casablanca, Bd Mohamed Al Bakkali. Bonnes voitures, excellent service, ouvert 24h/24 et 7j/7. Réservation sur WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoRental",
+  "name":"Nebrass Car",
+  "telephone":"+212661919788",
+  "address":{"@type":"PostalAddress","streetAddress":"Résidence Tarik, Bd Mohamed Al Bakkali","addressLocality":"Casablanca","postalCode":"20400","addressCountry":"MA"},
+  "geo":{"@type":"GeoCoordinates","latitude":33.5921542,"longitude":-7.5169492},
+  "openingHours":"Mo-Su 00:00-23:59",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"20"}
+}
+</script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span><i class="dot"></i><span data-i="tb_open">Ouvert 24h/24 · 7j/7</span></span>
+      <span>📍 Bd Mohamed Al Bakkali, Casablanca</span>
+    </div>
+    <div class="tb-r"><a href="tel:+212661919788" dir="ltr">+212 6 61 91 97 88</a></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Nebrass Car"><img src="assets/img/logo.svg" alt="">Nebrass<b>Car</b></a>
+    <div class="links" id="links">
+      <a href="#flotte" data-i="nav_fleet">Flotte</a>
+      <a href="#services" data-i="nav_services">Services</a>
+      <a href="#avis" data-i="nav_reviews">Avis</a>
+      <a href="#faq" data-i="nav_faq">FAQ</a>
+      <a href="#contact" data-i="nav_contact">Contact</a>
+    </div>
+    <div class="nav-r">
+      <div class="langs" role="group" aria-label="Langue">
+        <button data-l="fr">FR</button>
+        <button data-l="en">EN</button>
+        <button data-l="ar">ع</button>
+      </div>
+      <a href="#reserver" class="btn btn-red btn-sm" data-i="nav_book">Réserver</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="rating"><span class="g">G</span><span class="stars">★★★★★</span><span data-i="hero_rating">4,6 · 20 avis Google</span></div>
+        <h1 data-i="hero_title" data-html>Une bonne voiture, <span class="hl">un excellent service.</span></h1>
+        <p class="lead" data-i="hero_lead">Location de voitures à Casablanca, ouverte jour et nuit. Des voitures fiables, une équipe sérieuse et une réservation en 2 minutes sur WhatsApp.</p>
+        <div class="hero-ctas">
+          <a href="#reserver" class="btn btn-red" data-i="hero_cta1">Réserver maintenant</a>
+          <a href="#flotte" class="btn btn-line" data-i="hero_cta2">Voir la flotte</a>
+        </div>
+      </div>
+      <div class="hero-art stage" id="stage">
+        <div class="ring" aria-hidden="true"></div>
+        <div class="disc" aria-hidden="true"></div>
+        <canvas id="car3d" aria-label="Voiture en 3D"></canvas>
+        <div class="car fallback" id="heroCar" aria-hidden="true"></div>
+        <div class="sticker s1"><b>24/7</b><span data-i="st_247">Service continu</span></div>
+        <div class="sticker s2"><b>4,6 ★</b><span data-i="st_cmn">20 avis Google</span></div>
+        <div class="drag-hint" aria-hidden="true"><span>⟲</span> <span data-i="drag_hint">Faites tourner la voiture</span></div>
+      </div>
+    </div>
+
+    <!-- BOOKING -->
+    <div class="booking" id="reserver">
+      <form class="book" id="bookForm" novalidate>
+        <div class="fld full">
+          <label for="pick" data-i="bk_pick">Prise en charge</label>
+          <select id="pick">
+            <option value="cmn" data-i="opt_cmn">Aéroport Mohammed V</option>
+            <option value="agency" data-i="opt_agency">Agence Bd Mohamed Al Bakkali</option>
+            <option value="hotel" data-i="opt_hotel">Hôtel / adresse</option>
+            <option value="station" data-i="opt_station">Gare Casa-Voyageurs</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="d1" data-i="bk_d1">Départ</label>
+          <input type="date" id="d1" required>
+        </div>
+        <div class="fld">
+          <label for="d2" data-i="bk_d2">Retour</label>
+          <input type="date" id="d2" required>
+        </div>
+        <div class="fld">
+          <label for="cat" data-i="bk_cat">Véhicule</label>
+          <select id="cat">
+            <option value="eco" data-i="f_eco">Économique</option>
+            <option value="sedan" data-i="f_sedan">Berline</option>
+            <option value="suv" data-i="f_suv">SUV</option>
+            <option value="family" data-i="f_family">Familiale 7 places</option>
+            <option value="any" data-i="cat_any">Conseillez-moi</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="gear" data-i="bk_gear">Boîte</label>
+          <select id="gear">
+            <option value="man" data-i="man">Manuelle</option>
+            <option value="auto" data-i="auto">Automatique</option>
+          </select>
+        </div>
+        <div class="fld full">
+          <label for="name" data-i="bk_name">Votre nom</label>
+          <input type="text" id="name" autocomplete="name" required>
+        </div>
+        <button type="submit" class="btn btn-red">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+          <span data-i="bk_btn">Demander un prix</span>
+        </button>
+        <div class="book-note">
+          <span data-i="bk_n1">Réponse rapide sur WhatsApp</span>
+          <span data-i="bk_n2">Aucun paiement en ligne</span>
+          <span data-i="bk_n3">Sans frais cachés</span>
+          <span class="err" id="bookErr" role="alert"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+</header>
+
+<!-- FLEET -->
+<section id="flotte">
+  <div class="wrap">
+    <div class="head rev">
+      <div><span class="eyebrow" data-i="fl_tag">Notre flotte</span><h2 data-i="fl_title">Une voiture pour chaque trajet</h2></div>
+      <p data-i="fl_sub">De la citadine économique au SUV familial. Demandez un devis : on vous envoie le meilleur prix pour vos dates.</p>
+    </div>
+    <div class="tabs" id="tabs" role="tablist">
+      <button class="tab on" data-f="all" data-i="f_all">Toutes</button>
+      <button class="tab" data-f="eco" data-i="f_eco">Économique</button>
+      <button class="tab" data-f="sedan" data-i="f_sedan">Berline</button>
+      <button class="tab" data-f="suv" data-i="f_suv">SUV</button>
+      <button class="tab" data-f="family" data-i="f_family">Familiale 7 places</button>
+    </div>
+    <div class="fleet" id="fleet"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="dark" id="services">
+  <div class="wrap">
+    <div class="head rev">
+      <div><span class="eyebrow" data-i="sv_tag">Services</span><h2 data-i="sv_title">Plus qu'une simple location</h2></div>
+      <p data-i="sv_sub">On s'occupe de tout pour que vous preniez la route sans stress.</p>
+    </div>
+    <div class="bento">
+      <div class="bx big rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div>
+        <div><h3 data-i="s1t">Un excellent service</h3><p data-i="s1p">De la réservation au retour des clés, une équipe sérieuse qui s'occupe de vous. C'est ce que nos clients retiennent.</p></div>
+      </div>
+      <div class="bx rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><h3 data-i="s3t">Assistance 24h/24</h3><p data-i="s3p">Un appel ou un message WhatsApp suffit.</p></div>
+      </div>
+      <div class="bx rev">
+        <div class="num">4,6</div>
+        <div><p data-i="s_score">Note Google sur 20 avis clients.</p></div>
+      </div>
+      <div class="bx wide rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <div><h3 data-i="s2t">Livraison sur demande</h3><p data-i="s2p">À l'aéroport Mohammed V ou à votre adresse à Casablanca : demandez-nous lors de la réservation.</p></div>
+      </div>
+      <div class="bx rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+        <div><h3 data-i="s4t">Aller simple</h3><p data-i="s4p">Rendez la voiture dans une autre ville, sur demande.</p></div>
+      </div>
+      <div class="bx rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <div><h3 data-i="s5t">Courte et longue durée</h3><p data-i="s5p">Du week-end au mois, avec des tarifs dégressifs.</p></div>
+      </div>
+      <div class="bx wide rev">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></div>
+        <div><h3 data-i="s6t">On vous attend la prochaine fois</h3><p data-i="s6p">Nos clients reviennent : c'est notre plus belle récompense.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section>
+  <div class="wrap">
+    <div class="head rev">
+      <div><span class="eyebrow" data-i="st_tag">Comment ça marche</span><h2 data-i="st_title">Votre voiture en 3 étapes</h2></div>
+    </div>
+    <div class="steps">
+      <div class="step rev"><div class="n">1</div><h3 data-i="st1t">Envoyez votre demande</h3><p data-i="st1p">Choisissez vos dates et le type de voiture, puis envoyez la demande sur WhatsApp.</p></div>
+      <div class="step rev"><div class="n">2</div><h3 data-i="st2t">Recevez votre prix</h3><p data-i="st2p">On confirme la disponibilité et le tarif. Pas de frais cachés.</p></div>
+      <div class="step rev"><div class="n">3</div><h3 data-i="st3t">Prenez la route</h3><p data-i="st3p">Récupérez la voiture à l'agence, à l'aéroport ou à votre adresse.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="avis" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rev">
+      <div><span class="eyebrow" data-i="rv_tag">Avis clients</span><h2 data-i="rv_title">Ce que nos clients apprécient</h2></div>
+    </div>
+    <div class="rv">
+      <div class="score rev">
+        <div><div class="big">4,6</div><div class="stars">★★★★★</div></div>
+        <p data-i="rv_count">Note moyenne sur 20 avis Google.</p>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=NEBRASS+CAR+Bd+Mohamed+Al+Bakkali+Casablanca" data-i="rv_btn">Lire les avis sur Google</a>
+      </div>
+      <div class="praise">
+        <div class="pr rev"><div class="q">“</div><h3 data-i="p1t">Une bonne voiture</h3><p data-i="p1p">Des voitures fiables et en bon état, notées 5 étoiles par nos clients.</p></div>
+        <div class="pr rev"><div class="q">“</div><h3 data-i="p2t">Un excellent service</h3><p data-i="p2p">Un accueil sérieux et un service que les clients décrivent comme excellent.</p></div>
+        <div class="pr rev"><div class="q">“</div><h3 data-i="p3t">Des clients qui reviennent</h3><p data-i="p3p">« À la prochaine, inchallah » : plusieurs clients prévoient déjà de revenir.</p></div>
+        <div class="pr rev"><div class="q">“</div><h3 data-i="p4t">Ouvert jour et nuit</h3><p data-i="p4p">Une agence ouverte 24h/24 et 7j/7, joignable quand vous en avez besoin.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="faq-side rev">
+      <span class="eyebrow">FAQ</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px)" data-i="fq_title">Questions fréquentes</h2>
+      <p data-i="fq_sub">Vous ne trouvez pas votre réponse ? Écrivez-nous, on répond vite.</p>
+      <a href="https://wa.me/212661919788" target="_blank" rel="noopener" class="btn btn-ink" data-i="fq_btn">Poser une question</a>
+    </div>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- CTA + CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta rev">
+      <h2 data-i="cta_t">Vous arrivez bientôt à Casablanca ? Réservez votre voiture maintenant.</h2>
+      <div class="btns">
+        <a href="https://wa.me/212661919788" target="_blank" rel="noopener" class="btn btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp
+        </a>
+        <a href="tel:+212661919788" class="btn btn-line" data-i="cta_call">Appeler</a>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="cinfo rev">
+        <div class="crow"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><small data-i="ct_addr">Adresse</small><b>Résidence Tarik, Bd Mohamed Al Bakkali, Casablanca</b></div></div>
+        <div class="crow"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div><div><small data-i="ct_phone">Téléphone / WhatsApp</small><b><a href="tel:+212661919788" dir="ltr">+212 6 61 91 97 88</a></b></div></div>
+        <div class="crow"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><small data-i="ct_hours">Horaires</small><b data-i="tb_open">Ouvert 24h/24 · 7j/7</b></div></div>
+        <a class="btn btn-ink" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=33.5921542,-7.5169492" data-i="ct_dir">Itinéraire Google Maps</a>
+      </div>
+      <div class="map rev">
+        <iframe loading="lazy" title="Nebrass Car — Casablanca" src="https://maps.google.com/maps?q=33.5921542,-7.5169492&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="#top" class="logo"><img src="assets/img/logo.svg" alt="">Nebrass<b>Car</b></a>
+        <p data-i="ft_about" style="max-width:320px">Location de voitures à Casablanca, Bd Mohamed Al Bakkali. Bonnes voitures, excellent service, ouvert 24h/24.</p>
+      </div>
+      <div>
+        <h4 data-i="ft_links">Liens</h4>
+        <ul>
+          <li><a href="#flotte" data-i="nav_fleet">Flotte</a></li>
+          <li><a href="#services" data-i="nav_services">Services</a></li>
+          <li><a href="#avis" data-i="nav_reviews">Avis</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i="nav_contact">Contact</h4>
+        <ul>
+          <li>Résidence Tarik, Bd Mohamed Al Bakkali</li>
+          <li><a href="tel:+212661919788" dir="ltr">+212 6 61 91 97 88</a></li>
+          <li><a href="https://wa.me/212661919788" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i="ft_lang">Langue</h4>
+        <ul>
+          <li><a href="?lang=fr" data-setlang="fr">Français</a></li>
+          <li><a href="?lang=en" data-setlang="en">English</a></li>
+          <li><a href="?lang=ar" data-setlang="ar">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="big-name" aria-hidden="true">Nebrass Car</div>
+    <div class="copy"><span>© <span id="yr"></span> Nebrass Car</span><span data-i="ft_rights">Tous droits réservés</span></div>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/212661919788" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+<script type="module" src="assets/js/hero3d.js"></script>
+</body>
+</html>

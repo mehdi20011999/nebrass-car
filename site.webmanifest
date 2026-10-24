@@ -1,0 +1,9 @@
+{
+  "name": "Nebrass Car — Location de voitures Casablanca",
+  "short_name": "Nebrass Car",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf5ef",
+  "theme_color": "#24112f",
+  "icons": [{ "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
